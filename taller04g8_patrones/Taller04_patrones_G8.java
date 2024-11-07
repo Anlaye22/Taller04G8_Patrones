@@ -2,7 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package ec.edu.espol.taller04_patrones_g8;
+package taller04g8_patrones;
+
+import adapter.EmailNotifier;
+import adapter.Notifier;
+import adapter.WhatsappAdapter;
+import adapter.WhatsappService;
+import decorator.ColorDecorator;
+import decorator.FontStyleDecorator;
+import factorymethod.PdfReportFactory;
+import factorymethod.Report;
+import factorymethod.ReportFactory;
 
 /**
  *
