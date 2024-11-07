@@ -8,7 +8,7 @@ package adapter;
  *
  * @author GENERATION 10
  */
-public class WhatsappAdapter implements Notifier{
+public class WhatsappAdapter implements Notificacion{
     private WhatsappService whatsappService;
 
     public WhatsappAdapter(WhatsappService service) {
@@ -16,7 +16,7 @@ public class WhatsappAdapter implements Notifier{
     }
 
     @Override
-    public void sendNotification(String message) {
-        whatsappService.sendWhatsAppMessage(message);
+    public void enviarNotification(String message) {
+        whatsappService.enviarNotificationWhatsAppMessage(message);
     }
 }

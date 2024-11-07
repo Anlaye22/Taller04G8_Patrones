@@ -4,7 +4,7 @@
  */
 package decorator;
 
-
+import factorymethod.Report;
 
 /**
  *

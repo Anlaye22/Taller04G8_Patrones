@@ -9,7 +9,7 @@ package adapter;
  * @author GENERATION 10
  */
 public class WhatsappService {
-    public void sendWhatsAppMessage(String message) {
-        System.out.println("Sending WhatsApp message: " + message);
+    public void enviarNotificationWhatsAppMessage(String message) {
+        System.out.println("Enviando mensaje de WhatsApp: " + message);
     }
 }

@@ -8,10 +8,9 @@ package adapter;
  *
  * @author GENERATION 10
  */
-public class EmailNotifier implements Notifier {
+public class EmailNotifier implements Notificacion {
      @Override
-     public void sendNotification(String message) {
-        System.out.println("Sending email: " + message);
-        // Lógica para envío de correo
+     public void enviarNotification(String message) {
+        System.out.println("Enviando email: " + message);
     }
 }

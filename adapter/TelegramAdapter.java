@@ -4,11 +4,12 @@
  */
 package adapter;
 
+
 /**
  *
  * @author GENERATION 10
  */
-public class TelegramAdapter implements Notifier{
+public class TelegramAdapter implements Notificacion{
     private TelegramService telegramService;
 
     public TelegramAdapter(TelegramService service) {
@@ -16,7 +17,7 @@ public class TelegramAdapter implements Notifier{
     }
 
     @Override
-    public void sendNotification(String message) {
-        telegramService.sendTelegramMessage(message);
+    public void enviarNotification(String message) {
+        telegramService.enviarNotificationTelegramMessage(message);
     }
 }

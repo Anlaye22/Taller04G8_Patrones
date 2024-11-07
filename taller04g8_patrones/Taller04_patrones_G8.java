@@ -5,14 +5,15 @@
 package taller04g8_patrones;
 
 import adapter.EmailNotifier;
-import adapter.Notifier;
+import adapter.Notificacion;
 import adapter.WhatsappAdapter;
 import adapter.WhatsappService;
-import decorator.ColorDecorator;
-import decorator.FontStyleDecorator;
+import decorator.DecoratorColor;
+import decorator.DecoratorFuente;
 import factorymethod.PdfReportGenerator;
 import factorymethod.Report;
 import factorymethod.ReportGenerator;
+
 
 /**
  *
@@ -25,21 +26,21 @@ public class Taller04_patrones_G8 {
 
     public static void main(String[] args) {
         // Generación de un reporte PDF decorado
-        ReportGenerator pdfFactory = new PdfReportGenerator();
-        Report report = pdfFactory.createReport();
+        ReportGenerator pdfGenerator= new PdfReportGenerator();
+        Report report = pdfGenerator.createReport();
 
         // Decoración de estilos
-        report = new FontStyleDecorator(report, "Bold");
-        report = new ColorDecorator(report, "Red");
+        report = new DecoratorFuente(report, "Bold");
+        report = new DecoratorColor(report, "Red");
 
         // Generación del reporte con estilos aplicados
         report.generate("Reporte de ejemplo");
 
         // Envío de notificación por diferentes medios
-        Notifier emailNotifier = new EmailNotifier();
-        emailNotifier.sendNotification("Reporte generado");
+        Notificacion emailNotifier = new EmailNotifier();
+        emailNotifier.enviarNotification("Reporte generado");
 
-        Notifier whatsappNotifier = new WhatsappAdapter(new WhatsappService());
-        whatsappNotifier.sendNotification("Reporte generado");
+        Notificacion whatsappNotifier = new WhatsappAdapter(new WhatsappService());
+        whatsappNotifier.enviarNotification("Reporte generado");
     } 
 }

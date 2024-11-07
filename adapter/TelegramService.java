@@ -9,7 +9,7 @@ package adapter;
  * @author GENERATION 10
  */
 public class TelegramService {
-    public void sendTelegramMessage(String message) {
-        System.out.println("Sending Telegram message: " + message);
+    public void enviarNotificationTelegramMessage(String message) {
+        System.out.println("Enviando mensaje de Telegram: " + message);
     }
 }

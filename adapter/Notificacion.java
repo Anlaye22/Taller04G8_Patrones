@@ -8,6 +8,6 @@ package adapter;
  *
  * @author GENERATION 10
  */
-public interface Notifier {
-    void sendNotification(String message);
+public interface Notificacion {
+    void enviarNotification(String message);
 }
