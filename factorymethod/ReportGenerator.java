@@ -8,7 +8,7 @@ package factorymethod;
  *
  * @author GENERATION 10
  */
-public abstract class ReportFactory {
+public abstract class ReportGenerator{
     public abstract Report createReport();
 }
 

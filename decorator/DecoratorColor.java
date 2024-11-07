@@ -10,15 +10,17 @@ import factorymethod.Report;
  *
  * @author GENERATION 10
  */
-public class StyledReportDecorator implements Report {
-    protected Report decoratedReport;
+public class DecoratorColor extends InformeDecorator {
+    private String color;
 
-    public StyledReportDecorator(Report report) {
-        this.decoratedReport = report;
+    public DecoratorColor(Report report, String color) {
+        super(report);
+        this.color = color;
     }
 
     @Override
     public void generate(String content) {
-        decoratedReport.generate(content);
+        System.out.println("Aplicando Color: " + color);
+        report.generate(content);
     }
 }

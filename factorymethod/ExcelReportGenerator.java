@@ -8,7 +8,7 @@ package factorymethod;
  *
  * @author GENERATION 10
  */
-public class ExcelReportFactory extends ReportFactory {
+public class ExcelReportGenerator extends ReportGenerator {
     @Override
     public Report createReport() {
         return new ExcelReport();

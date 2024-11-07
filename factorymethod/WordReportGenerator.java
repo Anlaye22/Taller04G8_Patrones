@@ -8,9 +8,9 @@ package factorymethod;
  *
  * @author GENERATION 10
  */
-public class PdfReportFactory extends ReportFactory {
+public class WordReportGenerator extends ReportGenerator{
     @Override
     public Report createReport() {
-        return new PdfReport();
+        return new WordReport();
     }
 }

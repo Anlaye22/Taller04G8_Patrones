@@ -10,9 +10,9 @@ import adapter.WhatsappAdapter;
 import adapter.WhatsappService;
 import decorator.ColorDecorator;
 import decorator.FontStyleDecorator;
-import factorymethod.PdfReportFactory;
+import factorymethod.PdfReportGenerator;
 import factorymethod.Report;
-import factorymethod.ReportFactory;
+import factorymethod.ReportGenerator;
 
 /**
  *
@@ -25,7 +25,7 @@ public class Taller04_patrones_G8 {
 
     public static void main(String[] args) {
         // Generación de un reporte PDF decorado
-        ReportFactory pdfFactory = new PdfReportFactory();
+        ReportGenerator pdfFactory = new PdfReportGenerator();
         Report report = pdfFactory.createReport();
 
         // Decoración de estilos

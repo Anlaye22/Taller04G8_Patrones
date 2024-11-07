@@ -4,23 +4,24 @@
  */
 package decorator;
 
-import factorymethod.Report;
+
 
 /**
  *
  * @author GENERATION 10
  */
-public class FontStyleDecorator extends StyledReportDecorator {
-private String fontStyle;
+public class DecoratorEstilo extends InformeDecorator {
+    private String estilo;
 
-    public FontStyleDecorator(Report report, String fontStyle) {
+    public DecoratorEstilo(Report report, String estilo) {
         super(report);
-        this.fontStyle = fontStyle;
+        this.estilo = estilo;
     }
 
     @Override
     public void generate(String content) {
-        System.out.println("Applying font style: " + fontStyle);
-        super.generate(content);
+        System.out.println("Aplicando Estilo: " + estilo);
+        report.generate(content);
     }
+
 }
